@@ -4,6 +4,10 @@ title: Xynrin 的主页
 permalink: /
 ---
 
+<!-- 新增：网站 Icon（复用 GitHub 头像链接） -->
+<link rel="icon" href="https://avatars.githubusercontent.com/u/203426472?u=ef18a376998f0315cda1a14974099134826b6abd&v=4&size=64" type="image/png">
+<link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/203426472?u=ef18a376998f0315cda1a14974099134826b6abd&v=4&size=64" type="image/png">
+
 <!-- 整体布局容器 -->
 <div class="layout-container">
   <!-- 侧边栏：固定个人信息 -->
