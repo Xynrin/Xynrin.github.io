@@ -1,0 +1,11 @@
+title: Xynrin Blog
+description: 记录灵感、项目与持续构建中的作品集
+theme: minima
+plugins:
+  - jekyll-feed
+
+lang: zh-CN
+timezone: Asia/Shanghai
+
+header_pages:
+  - index.md
