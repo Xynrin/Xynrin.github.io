@@ -37,22 +37,21 @@ permalink: /
     </div>
 
     <!-- 文章列表 -->
-    <ul class="post-list">
-      {% for post in site.posts limit:10 %}
-        <li class="post-item">
-          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-          <p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
-          {% if post.excerpt %}
-            <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>
-          {% endif %}
-        </li>
-      {% empty %}
-        <!-- 无文章时的提示 -->
-        <li class="post-item post-item--empty">
-          <p>暂无文章，敬请期待 📝</p>
-        </li>
-      {% endfor %}
-    </ul>
+  <ul class="post-list">
+    {% for post in site.posts limit:10 %}
+      <li class="post-item">
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
+        {% if post.excerpt %}
+          <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>
+        {% endif %}
+      </li>
+    {% else %}
+      <li class="post-item post-item--empty">
+        <p>暂无文章，敬请期待 📝</p>
+      </li>
+    {% endfor %}
+    </ul>  
   </main>
 </div>
 
