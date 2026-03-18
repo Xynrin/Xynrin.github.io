@@ -106,6 +106,7 @@ permalink: /
     max-width: 1400px;
     margin: 0 auto;
     padding: 2rem 1rem;
+    align-items: start;
   }
 
   .sidebar-left,
@@ -145,8 +146,8 @@ permalink: /
   .signature-banner img {
     width: 100%;
     max-width: 100%;
-    border-radius: 14px;
     display: block;
+    border-radius: 14px;
   }
 
   .sidebar__social {
@@ -187,13 +188,14 @@ permalink: /
 
   .content-banner {
     margin-bottom: 1.5rem;
+    overflow: hidden;
+    border-radius: 18px;
   }
 
   .content-banner img {
     display: block;
     width: 100%;
-    max-height: 230px;
-    object-fit: cover;
+    height: auto;
     border-radius: 18px;
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
   }
@@ -312,15 +314,12 @@ permalink: /
   @media (max-width: 768px) {
     .layout-container {
       grid-template-columns: 1fr;
+      padding: 1rem;
     }
 
     .sidebar-left,
     .sidebar-right {
       position: static;
-    }
-
-    .content-banner img {
-      max-height: 180px;
     }
   }
 </style>
