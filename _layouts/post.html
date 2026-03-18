@@ -1,0 +1,178 @@
+---
+layout: default
+---
+
+<style>
+  .page-content .wrapper,
+  .wrapper {
+    max-width: 960px !important;
+    width: 100% !important;
+  }
+
+  main.page-content {
+    max-width: 100% !important;
+  }
+
+  .post-shell {
+    max-width: 860px;
+    margin: 2rem auto 4rem;
+    padding: 0 1rem;
+  }
+
+  .post-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-bottom: 1.25rem;
+    padding: 0.65rem 1rem;
+    border-radius: 999px;
+    background: #f1f5f9;
+    color: #1d4ed8;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .post-back:hover {
+    background: #e2e8f0;
+    transform: translateY(-1px);
+  }
+
+  .post-card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+  }
+
+  .post-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .post-title {
+    margin: 0 0 0.75rem;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    line-height: 1.2;
+    color: #0f172a;
+  }
+
+  .post-meta {
+    color: #94a3b8;
+    font-size: 0.95rem;
+  }
+
+  .post-content {
+    color: #334155;
+    line-height: 1.9;
+    font-size: 1.04rem;
+  }
+
+  .post-content h1,
+  .post-content h2,
+  .post-content h3,
+  .post-content h4 {
+    color: #0f172a;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.35;
+  }
+
+  .post-content p {
+    margin: 0 0 1rem;
+  }
+
+  .post-content a {
+    color: #1d4ed8;
+    text-decoration: none;
+  }
+
+  .post-content a:hover {
+    text-decoration: underline;
+  }
+
+  .post-content ul,
+  .post-content ol {
+    margin: 0 0 1rem 1.5rem;
+  }
+
+  .post-content blockquote {
+    margin: 1.5rem 0;
+    padding: 0.9rem 1rem;
+    border-left: 4px solid #60a5fa;
+    background: #f8fbff;
+    color: #475569;
+    border-radius: 0 12px 12px 0;
+  }
+
+  .post-content img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  }
+
+  .post-content pre,
+  .post-content code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+
+  .post-content pre {
+    overflow-x: auto;
+    padding: 1rem;
+    border-radius: 16px;
+    background: #0f172a;
+    color: #e2e8f0;
+    margin: 1.2rem 0;
+  }
+
+  .post-content code {
+    background: #f1f5f9;
+    padding: 0.15rem 0.35rem;
+    border-radius: 6px;
+    font-size: 0.95em;
+  }
+
+  .post-content pre code {
+    background: transparent;
+    padding: 0;
+    color: inherit;
+  }
+
+  @media (max-width: 768px) {
+    .post-shell {
+      margin-top: 1rem;
+    }
+
+    .post-card {
+      padding: 1.25rem;
+      border-radius: 18px;
+    }
+
+    .post-title {
+      font-size: 1.8rem;
+    }
+  }
+</style>
+
+<div class="post-shell">
+  <a class="post-back" href="{{ '/' | relative_url }}">← 返回首页</a>
+
+  <article class="post-card">
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <div class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: "%Y-%m-%d" }}
+        </time>
+      </div>
+    </header>
+
+    <div class="post-content">
+      {{ content }}
+    </div>
+  </article>
+</div>
