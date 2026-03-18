@@ -99,16 +99,15 @@ permalink: /
     box-sizing: border-box;
   }
 
-  .layout-container {
-    display: grid;
-    grid-template-columns: 260px 1fr 300px;
-    gap: 1.5rem;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    align-items: start;
-  }
-
+.layout-container {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr) 260px;
+  gap: 1.25rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  align-items: start;
+}
   .sidebar-left,
   .sidebar-right {
     align-self: start;
@@ -182,23 +181,23 @@ permalink: /
     flex-shrink: 0;
   }
 
-  .main-content {
-    min-width: 0;
-  }
+.main-content {
+  min-width: 0;
+  width: 100%;
+}
+.content-banner {
+  margin-bottom: 1.5rem;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
 
-  .content-banner {
-    margin-bottom: 1.5rem;
-    overflow: hidden;
-    border-radius: 18px;
-  }
-
-  .content-banner img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 18px;
-    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
-  }
+.content-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
   .content-header {
     margin-bottom: 1.5rem;
@@ -213,11 +212,11 @@ permalink: /
     color: #64748b;
   }
 
-  .repo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1rem;
-  }
+ .repo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
 
   .repo-card {
     padding: 1.4rem;
@@ -300,26 +299,26 @@ permalink: /
     border-bottom: none;
   }
 
-  @media (max-width: 1100px) {
-    .layout-container {
-      grid-template-columns: 240px 1fr;
-    }
-
-    .sidebar-right {
-      grid-column: 1 / -1;
-      position: static;
-    }
+@media (max-width: 1250px) {
+  .layout-container {
+    grid-template-columns: 220px 1fr;
   }
 
-  @media (max-width: 768px) {
-    .layout-container {
-      grid-template-columns: 1fr;
-      padding: 1rem;
-    }
-
-    .sidebar-left,
-    .sidebar-right {
-      position: static;
-    }
+  .sidebar-right {
+    grid-column: 1 / -1;
+    position: static;
   }
+}
+
+ @media (max-width: 768px) {
+  .layout-container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .sidebar-left,
+  .sidebar-right {
+    position: static;
+  }
+}
 </style>
