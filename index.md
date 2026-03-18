@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: default
 title: Xynrin 的主页
 permalink: /
 ---
@@ -93,6 +93,22 @@ permalink: /
     </div>
   </aside>
 </div>
+
+.page-content .wrapper,
+.wrapper {
+  max-width: 1440px !important;
+  width: 100% !important;
+}
+
+main.page-content {
+  max-width: 100% !important;
+}
+
+.page-content {
+  padding-top: 24px;
+}
+
+
 
 <style>
   * {
