@@ -12,8 +12,8 @@ permalink: /
     用更轻盈的方式展示正在进行中的作品与思考。
   </p>
   <div class="hero__actions">
-    <a class="button button--primary" href="#highlights">查看亮点</a>
-    <a class="button" href="https://github.com/">访问 GitHub</a>
+    <a class="button button--primary" href="#latest-posts">查看最新文章</a>
+    <a class="button" href="https://github.com/Xynrin">访问 GitHub</a>
   </div>
 </div>
 
@@ -33,6 +33,20 @@ permalink: /
     <p>首页会随着内容更新不断增强，后续还会加入更多专题入口与展示模块。</p>
   </section>
 </div>
+
+## 最新文章 {#latest-posts}
+
+<ul class="post-list">
+  {% for post in site.posts limit:5 %}
+    <li class="post-item">
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
+      {% if post.excerpt %}
+        <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
 
 ## 近期计划
 
@@ -119,6 +133,36 @@ permalink: /
   .feature-card h3 {
     margin-top: 0;
     margin-bottom: 0.6rem;
+  }
+
+  .post-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 2rem;
+  }
+
+  .post-item {
+    padding: 1.2rem 1.3rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  }
+
+  .post-item h3 {
+    margin: 0 0 0.4rem;
+  }
+
+  .post-item a {
+    text-decoration: none;
+    color: #1d4ed8;
+  }
+
+  .post-meta {
+    margin-bottom: 0.5rem;
+    color: #6b7280;
+    font-size: 0.92rem;
   }
 
   @media (max-width: 640px) {
