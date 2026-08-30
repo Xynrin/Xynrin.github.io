@@ -1,4 +1,4 @@
-baseURL: https://Francis-Xavier-code.github.io
+baseURL: https://yxxbc.github.io
 locale: zh-cn
 defaultContentLanguage: zh-cn
 hasCJKLanguage: true
@@ -42,7 +42,7 @@ params:
 
   socialIcons:
     - name: github
-      url: https://github.com/Francis-Xavier-code
+      url: https://github.com/yxxbc
     - name: email
       url: mailto:xynrin@163.com
     - name: bilibili
